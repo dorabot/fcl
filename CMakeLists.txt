@@ -275,9 +275,6 @@ add_subdirectory(include/fcl)
 set(pkg_conf_file_in "${CMAKE_CURRENT_SOURCE_DIR}/fcl.pc.in")
 set(pkg_conf_file_out "${CMAKE_CURRENT_BINARY_DIR}/fcl.pc")
 set(PKG_DESC "Flexible Collision Library")
-if(NOT MSVC)
-    set(PKG_CFLAGS "-std=c++11")
-endif()
 configure_file("${pkg_conf_file_in}" "${pkg_conf_file_out}" @ONLY)
 
 install(DIRECTORY include/ DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
